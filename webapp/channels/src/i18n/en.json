@@ -4781,7 +4781,7 @@
   "login.session_expired.title": "* Session Expired - {siteName}",
   "login.subtitle": "Collaborate with your team in real-time",
   "login.terms_rejected": "You must agree to the terms of use before accessing {siteName}. Please contact your System Administrator for more details.",
-  "login.title": "Welcome to Konnect",
+  "login.title": "Welcome to K25KM-Connect",
   "login.username": "Username",
   "login.userNotFound": "We couldn't find an account matching your login credentials.",
   "login.verified": " Email Verified",
