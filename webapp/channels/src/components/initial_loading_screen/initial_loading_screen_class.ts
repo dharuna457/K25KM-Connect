@@ -4,17 +4,17 @@
 import {Measure, measureAndReport} from 'utils/performance_telemetry';
 import {isDesktopApp} from 'utils/user_agent';
 
-const ANIMATION_NAME_FADE_OUT = 'fadeOut';
-const ANIMATION_NAME_TEXT_FADE_OUT = 'textFadeOut';
+const ANIMATION_CLASS_FOR_MATTERMOST_LOGO_HIDE = 'LoadingAnimation__compass-shrink';
+const ANIMATION_CLASS_FOR_COMPLETE_LOADER_HIDE = 'LoadingAnimation__shrink';
 
 const LOADING_CLASS_FOR_SCREEN = 'LoadingScreen LoadingScreen--darkMode';
 const LOADING_COMPLETE_CLASS_FOR_SCREEN = 'LoadingScreen LoadingScreen--darkMode LoadingScreen--loaded';
 
 const STATIC_CLASS_FOR_ANIMATION = 'LoadingAnimation LoadingAnimation--darkMode';
-const LOADING_CLASS_FOR_ANIMATION = STATIC_CLASS_FOR_ANIMATION + ' LoadingAnimation--loading';
-const LOADING_COMPLETE_CLASS_FOR_ANIMATION = STATIC_CLASS_FOR_ANIMATION + ' LoadingAnimation--loaded';
+const LOADING_CLASS_FOR_ANIMATION = STATIC_CLASS_FOR_ANIMATION + ' LoadingAnimation--spinning LoadingAnimation--loading';
+const LOADING_COMPLETE_CLASS_FOR_ANIMATION = STATIC_CLASS_FOR_ANIMATION + ' LoadingAnimation--spinning LoadingAnimation--loaded';
 
-const DESTROY_DELAY_AFTER_ANIMATION_END = 500;
+const DESTROY_DELAY_AFTER_ANIMATION_END = 1000;
 
 export class InitialLoadingScreenClass {
     private isLoading: boolean | null = true;
@@ -53,12 +53,12 @@ export class InitialLoadingScreenClass {
             return;
         }
 
-        // Listen for the fade out animation to complete
-        if (event.animationName === ANIMATION_NAME_FADE_OUT || event.animationName === ANIMATION_NAME_TEXT_FADE_OUT) {
+        if (event.animationName === ANIMATION_CLASS_FOR_MATTERMOST_LOGO_HIDE || event.animationName === ANIMATION_CLASS_FOR_COMPLETE_LOADER_HIDE) {
             if (!this.isLoading) {
                 this.loadingAnimationElement.className = STATIC_CLASS_FOR_ANIMATION;
 
                 // Automatically destroy the loading screen after the animation has finished.
+                // Should be changed if we want to loading animation to start again.
                 setTimeout(() => {
                     this.destroy();
                 }, DESTROY_DELAY_AFTER_ANIMATION_END);
@@ -136,3 +136,4 @@ export class InitialLoadingScreenClass {
         });
     }
 }
+
