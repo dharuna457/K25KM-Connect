@@ -105,7 +105,7 @@ export default function AboutBuildModalCloud(props: Props) {
                                 values={{
                                     linkServer: (msg: React.ReactNode) => (
                                         <ExternalLink
-                                            href='https://github.com/mattermost/mattermost-server/blob/master/NOTICE.txt'
+                                            href='https://github.com/dharuna457/K25KM-Connect/blob/main/NOTICE.txt'
                                             location='about_build_modal_cloud'
                                         >
                                             {msg}
@@ -113,7 +113,7 @@ export default function AboutBuildModalCloud(props: Props) {
                                     ),
                                     linkDesktop: (msg: React.ReactNode) => (
                                         <ExternalLink
-                                            href='https://github.com/mattermost/desktop/blob/master/NOTICE.txt'
+                                            href='https://github.com/dharuna457/K25KM-Connect/blob/main/NOTICE.txt'
                                             location='about_build_modal_cloud'
                                         >
                                             {msg}
@@ -121,7 +121,7 @@ export default function AboutBuildModalCloud(props: Props) {
                                     ),
                                     linkMobile: (msg: React.ReactNode) => (
                                         <ExternalLink
-                                            href='https://github.com/mattermost/mattermost-mobile/blob/master/NOTICE.txt'
+                                            href='https://github.com/dharuna457/K25KM-Connect/blob/main/NOTICE.txt'
                                             location='about_build_modal_cloud'
                                         >
                                             {msg}
@@ -132,7 +132,7 @@ export default function AboutBuildModalCloud(props: Props) {
                             <div className='copy-right'>
                                 <FormattedMessage
                                     id='about.copyright'
-                                    defaultMessage='Copyright 2015 - {currentYear} Mattermost, Inc. All rights reserved'
+                                    defaultMessage='Copyright 2015 - {currentYear} K25KM - Konnect, Inc. All rights reserved'
                                     values={{
                                         currentYear: new Date().getFullYear(),
                                     }}

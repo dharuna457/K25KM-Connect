@@ -101,13 +101,13 @@ export default function AboutBuildModal(props: Props) {
         <div>
             <FormattedMessage
                 id='about.teamEditionLearn'
-                defaultMessage='Join the Mattermost community at '
+                defaultMessage='Join the Konnect community at '
             />
             <ExternalLink
                 location='about_build_modal'
-                href='https://mattermost.com/community/'
+                href='https://dharunashokkumar.com/konnect/community'
             >
-                {'mattermost.com/community/'}
+                {'dharunashokkumar.com/konnect/community/'}
             </ExternalLink>
         </div>
     );
@@ -136,9 +136,9 @@ export default function AboutBuildModal(props: Props) {
                 />
                 <ExternalLink
                     location='about_build_modal'
-                    href='https://mattermost.com/'
+                    href='https://dharunashokkumar.com/konnect/enterprises'
                 >
-                    {'mattermost.com'}
+                    {'dharunashokkumar.com/konnect/enterprises/'}
                 </ExternalLink>
             </div>
         );
@@ -295,7 +295,7 @@ export default function AboutBuildModal(props: Props) {
                     <FormattedMessage
                         id='about.title'
                         values={{
-                            appTitle: config.SiteName || 'Mattermost',
+                            appTitle: config.SiteName || 'Konnect',
                         }}
                         defaultMessage='About {appTitle}'
                     />
@@ -309,7 +309,7 @@ export default function AboutBuildModal(props: Props) {
                     <div>
                         <h3 className='about-modal__title'>
                             <strong>
-                                {'Mattermost'} {title}
+                                {'Konnect'} {title}
                             </strong>
                         </h3>
                         <p className='about-modal__subtitle pb-2'>
@@ -351,7 +351,7 @@ export default function AboutBuildModal(props: Props) {
                         <div className='about-modal__copyright'>
                             <FormattedMessage
                                 id='about.copyright'
-                                defaultMessage='Copyright 2015 - {currentYear} Mattermost, Inc. All rights reserved'
+                                defaultMessage='Copyright 2015 - {currentYear} K25KM - Konnect, Inc. All rights reserved'
                                 values={{
                                     currentYear: new Date().getFullYear(),
                                 }}
@@ -368,12 +368,12 @@ export default function AboutBuildModal(props: Props) {
                     <p>
                         <FormattedMessage
                             id='about.notice'
-                            defaultMessage='Mattermost is made possible by the open source software used in our <linkServer>server</linkServer>, <linkDesktop>desktop</linkDesktop> and <linkMobile>mobile</linkMobile> apps.'
+                            defaultMessage='Konnect is made possible by the Communication software used in our <linkServer>server</linkServer>, <linkDesktop>desktop</linkDesktop> and <linkMobile>mobile</linkMobile> apps.'
                             values={{
                                 linkServer: (msg: React.ReactNode) => (
                                     <ExternalLink
                                         location='about_build_modal'
-                                        href='https://github.com/mattermost/mattermost-server/blob/master/NOTICE.txt'
+                                        href='https://github.com/dharuna457/K25KM-Connect/blob/main/NOTICE.txt'
                                     >
                                         {msg}
                                     </ExternalLink>
@@ -381,7 +381,7 @@ export default function AboutBuildModal(props: Props) {
                                 linkDesktop: (msg: React.ReactNode) => (
                                     <ExternalLink
                                         location='about_build_modal'
-                                        href='https://github.com/mattermost/desktop/blob/master/NOTICE.txt'
+                                        href='https://github.com/dharuna457/K25KM-Connect/blob/main/NOTICE.txt'
                                     >
                                         {msg}
                                     </ExternalLink>
@@ -389,7 +389,7 @@ export default function AboutBuildModal(props: Props) {
                                 linkMobile: (msg: React.ReactNode) => (
                                     <ExternalLink
                                         location='about_build_modal'
-                                        href='https://github.com/mattermost/mattermost-mobile/blob/master/NOTICE.txt'
+                                        href='https://github.com/dharuna457/K25KM-Connect/blob/main/NOTICE.txt'
                                     >
                                         {msg}
                                     </ExternalLink>
